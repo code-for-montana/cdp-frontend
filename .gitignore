@@ -4,7 +4,7 @@
 node_modules
 lib
 es
-dist
+# dist
 build
 type-declarations
 dist-docs
