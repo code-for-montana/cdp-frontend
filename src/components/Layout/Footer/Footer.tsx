@@ -1,5 +1,11 @@
 import React, { FC } from "react";
 import { strings } from "../../../assets/LocalizedStrings";
+import bigskylogo from "../../../assets/images/logos/BigSkyChamber.png";
+import gfchamber from "../../../assets/images/logos/GFChamber.png";
+import helenachamber from "../../../assets/images/logos/HelenaChamber.png";
+import kalispellchamber from "../../../assets/images/logos/KalispellChamber.png";
+import missoulachamber from "../../../assets/images/logos/MissoulaChamber.png";
+import montanachamber from "../../../assets/images/logos/MontanaChamber.png";
 
 interface Link {
   /*Displayed string represents the link*/
@@ -57,6 +63,22 @@ const Footer: FC<FooterProps> = ({ footerLinksSections }: FooterProps) => {
                   <a href="https://github.com/CouncilDataProject">GitHub</a>
                 </li>
               </ul>
+            </section>
+            <section className="mzp-c-footer-section">
+              <h5 className="mzp-c-footer-heading">
+                This advocacy service was made possible by...
+              </h5>
+              <div style={{ marginBottom: "3rem" }}>
+                <img src={bigskylogo} width="30%" style={{ marginRight: "1rem" }} />
+                <img src={helenachamber} width="20%" style={{ marginRight: "1rem" }} />
+                <img src={montanachamber} width="40%" />
+              </div>
+
+              <div>
+                <img src={gfchamber} width="30%" style={{ marginRight: "1rem" }} />
+                <img src={kalispellchamber} width="30%" style={{ marginRight: "1rem" }} />
+                <img src={missoulachamber} width="30%" />
+              </div>
             </section>
             {footerLinksSections.map((footerLinksSection: FooterLinksSection) => {
               return renderFooterLinksSection(footerLinksSection);
